@@ -2,12 +2,9 @@ from flask import Flask,render_template,request,redirect,flash,url_for
 import pickle as pk
 
 app = Flask(__name__)
-@app.route('/')
+app.secret_key = "hello"
+@app.route('/', methods=['POST','GET'])
 def index():
-    return render_template('index.html')
-
-@app.route('/predict',methods=['POST','GET'])
-def predict():
     if request.method == 'POST':
         noc = request.form['course_no']
         ts = request.form['time_s']
@@ -15,8 +12,7 @@ def predict():
         features = [float(i) for i in c]
         model = pk.load(open('model.pkl','rb'))
         pred = model.predict([features])
-        return render_template('predict.html', pred = pred)
-        
-
+        flash(pred)
+    return render_template('index.html')
 if __name__ == "__main__":
     app.run(debug=True)
