@@ -1,0 +1,60 @@
+#left,
+#center,
+#right {
+    position: relative;
+    float: left;
+    margin: 1em 0.1em 0.1em 0.8%;
+    padding: 0.1em;
+}
+
+#left {
+    width: 15%;
+    height: auto;
+}
+
+#center {
+    width: 69%;
+    height: auto;
+    text-align: center;
+    line-height: 0.2em;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#right {
+    width: 15%;
+    height: auto;
+}
+
+#clr {
+    clear: both;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    background: green;
+    border-radius: 50%;
+}
+
+hr {
+    background: #A32701;
+    height: 3px;
+    border: none;
+}
+
+h2 {
+    color: red;
+    font-weight: bold;
+}
+
+h3 {
+    color: green;
+    font-weight: bold;
+}
+
+h4 {
+    color: black;
+    font-weight: bold;
+}
