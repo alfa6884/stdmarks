@@ -1,6 +1,4 @@
 from flask import Flask,render_template,request,redirect,flash,url_for
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split
 import pickle as pk
 
 app = Flask(__name__)
