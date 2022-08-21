@@ -3,7 +3,7 @@ from flask import Flask,render_template,request,redirect,flash,url_for
 import pickle as pk
 
 app = Flask(__name__)
-#app.secret_key = "scretkey123" 
+app.secret_key = "scretkey123" 
 #@app.route('/')
 #def index():
    # return render_template('index.html')
