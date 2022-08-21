@@ -1,10 +1,14 @@
+
 from flask import Flask,render_template,request,redirect,flash,url_for
 import pickle as pk
 
 app = Flask(__name__)
-
-@app.route('/',methods=['POST','GET'])
+@app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/predict',methods=['POST','GET'])
+def predict():
     if request.method == 'POST':
         noc = request.form['course_no']
         ts = request.form['time_s']
@@ -17,3 +21,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=False)
+
