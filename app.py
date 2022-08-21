@@ -18,7 +18,7 @@ def predict():
         model = pk.load(open('model.pkl','rb'))
         pred = model.predict([mark])
         flash(pred)
-        return render_template('index.html')
+        return redirect(url_for('index'))
         
 
 if __name__ == "__main__":
