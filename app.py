@@ -18,7 +18,7 @@ def predict():
         model = pk.load(open('model.pkl','rb'))
         pred = model.predict([features])
         flash(pred)
-        return render_template('index.html')
+     return render_template('index.html')
         
 
 if __name__ == "__main__":
